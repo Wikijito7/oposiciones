@@ -1,19 +1,16 @@
 package me.wokis.oposiciones.data;
 
+import lombok.Getter;
+import lombok.ToString;
+
 import java.util.Arrays;
 import java.util.List;
 
+@ToString
+@Getter
 public class PreguntasData {
 
-    public PregData[] preguntas;
-
-    public class PregData {
-        public String type;
-        public String pregunta;
-        public String respuesta;
-    }
-
-    public List<PregData> getPregData(){
-        return Arrays.asList(preguntas);
-    }
+    private String type;
+    private String pregunta;
+    private String respuesta;
 }

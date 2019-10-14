@@ -16,7 +16,7 @@ public class Archivos {
 
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-    public ArrayList loadFiles() throws IOException {
+    public ArrayList<PreguntasData> loadFiles() throws IOException {
         URLConnection connection = new URL("https://wikijito7.github.io/preguntas.json").openConnection();
         final String redirect = connection.getHeaderField("Location");
         if (redirect != null) connection = new URL(redirect).openConnection();
@@ -24,18 +24,24 @@ public class Archivos {
         final StringBuilder sb = new StringBuilder();
         String lines;
         while ((lines = br.readLine()) != null) sb.append(lines);
-
-        return gson.fromJson(sb.toString(), new TypeToken<Collection<PreguntasData>>(){}.getType());
+        return gson.fromJson(sb.toString(), new TypeToken<ArrayList<PreguntasData>>(){}.getType());
     }
 
-    public ArrayList loadFilesFromLocal() throws IOException {
-        final BufferedReader br = new BufferedReader(new FileReader(new File("./preguntas/preguntas.json")));
-        System.out.println();
-        final StringBuilder sb = new StringBuilder();
-        String lines;
-        while ((lines = br.readLine()) != null) sb.append(lines);
-
-        return gson.fromJson(sb.toString(), new TypeToken<Collection<PreguntasData>>(){}.getType());
+    public ArrayList<PreguntasData> loadFilesFromLocal() {
+        try {
+            final BufferedReader br = new BufferedReader(new FileReader(new File("./preguntas/preguntas.json")));
+            final StringBuilder sb = new StringBuilder();
+            String lines;
+            while ((lines = br.readLine()) != null) sb.append(lines);
+            return gson.fromJson(sb.toString(), new TypeToken<ArrayList<PreguntasData>>() {
+            }.getType());
+        } catch (IOException e) {
+            try {
+                return loadFiles();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+        return null;
     }
-
 }

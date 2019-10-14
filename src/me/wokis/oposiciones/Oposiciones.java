@@ -19,20 +19,19 @@ public class Oposiciones extends JFrame {
     public FileManager fileManager;
     public Archivos archivos;
 
-    public Oposiciones(){
+    private Oposiciones(){
         menu = new Menu(this);
         preguntas = new Preguntas2(this);
         fileManager = new FileManager(this);
         archivos = new Archivos();
         data = new Data();
         menu.confVent();
-        try {
-            archivos.loadFilesFromLocal().forEach(e->{
-
-            });
-        } catch (IOException e) {
-            System.out.println("Fayito riko");
-        }
+        archivos.loadFilesFromLocal().forEach(e-> {
+            System.out.println(e.getType());
+            System.out.println(e.getPregunta());
+            System.out.println(e.getRespuesta());
+            System.out.println("\n");
+        });
     }
 
     public static void main(String[] args) {
