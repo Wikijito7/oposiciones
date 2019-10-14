@@ -12,7 +12,7 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Archivos {
+public class Archivos { //loveu, cadox
 
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 

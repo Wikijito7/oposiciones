@@ -7,6 +7,7 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class Preguntas2 extends JFrame {
 
@@ -22,6 +23,7 @@ public class Preguntas2 extends JFrame {
     private JComboBox<String> preguntaCB, tipopreguntaCB;
     private JButton btnCont, finBtn;
     private JLabel rlabel;
+    private ArrayList<String> tipos = new ArrayList<>();
 
     public void confVent(){
         main.setTitle("Oposiciones Mecánicos");
@@ -39,10 +41,19 @@ public class Preguntas2 extends JFrame {
         tipoPreguntaLbl.setBounds(x, y, width, 30);
 
         tipopreguntaCB = new JComboBox<>();
-        //tipopreguntaCB.setBorder(new LineBorder(Color.black));
-        tipopreguntaCB.addItem("test");
-        tipopreguntaCB.addItem("test2");
-        tipopreguntaCB.addItem("test3");
+        main.archivos.loadFilesFromLocal().forEach(e->{
+            if (!tipos.contains(e.getType())){
+                tipos.add(e.getType());
+                tipopreguntaCB.addItem(e.getType());
+            }
+        });
+        tipopreguntaCB.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                preguntaCB.removeAllItems();
+                main.archivos.loadFilesFromLocal().stream().filter(b -> b.getType().equals(tipopreguntaCB.getSelectedItem())).forEach(g-> preguntaCB.addItem(g.getPregunta()));
+
+            }
+        });
         tipopreguntaCB.setBounds(x, y + 30, width/3, 30);
 
         area = new JTextArea();

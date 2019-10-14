@@ -66,7 +66,7 @@ public class Menu extends JFrame {
             }
         });
 
-        JLabel label = new JLabel("Hecho con <3 por Wokis. Versión 1.0");
+        JLabel label = new JLabel("Hecho con <3 por Wokis. Versión 1.0.");
         label.setBounds(x, main.getHeight()-60, 300, 20);
 
         main.add(userLbl);

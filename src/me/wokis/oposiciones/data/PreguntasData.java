@@ -8,7 +8,7 @@ import java.util.List;
 
 @ToString
 @Getter
-public class PreguntasData {
+public class PreguntasData { //ty, cadox
 
     private String type;
     private String pregunta;
