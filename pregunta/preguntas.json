@@ -1,0 +1,92 @@
+[
+   {
+      "type":"Normas",
+      "pregunta":"¿Cuándo puedes cometer actos ilegales?",
+      "respuesta":"Estarán permitidas siempre y cuando: no se esté de servicio; la ciudad no se quede sin servicio, mínimo 2 personas en el taller; avisar antes a un jefe de mecánicos."
+   },
+   {
+      "type":"Normas",
+      "pregunta":"¿Qué puede hacer un recluta?",
+      "respuesta":"No podrán tunear sin la supervisión de un superior, solo podrán ir a avisos y tendrán que ir acompañado de un experimentado."
+   },
+   {
+      "type":"Normas",
+      "pregunta":"¿Puede un recluta tunear?",
+      "respuesta":"No podrán tunear sin la supervisión de un superior."
+   },
+   {
+      "type":"Normas",
+      "pregunta":"¿Quién puede tunear un coche vip?",
+      "respuesta":"A partir de experimentado podrán tunear los vehículos vips."
+   },
+   { 
+      "type":"Normas",
+      "pregunta":"¿Puedes realizar actividades ociosas estando de servicio?",
+      "respuesta":" Si se sale del taller para cualquier actividad ociosa habrá que quitarse de servicio, a no ser que se vaya a un evento y se requiera mecánico, comprar comida o se tenga el permiso de un superior."
+   },
+   { 
+      "type":"Normas",
+      "pregunta":"¿Puedes tunearte tus propios vehículos?",
+      "respuesta":"Para tunear un vehículo propio es necesario que lo haga otro compañero o pedir permiso a un superior."
+   },
+   { 
+      "type":"Normas",
+      "pregunta":"¿Qué debes hacer en caso de que veas un vehículo abandonado por la calle?",
+      "respuesta":"No dejar los vehículos tirados por la calle, en caso de haber alguno se debe confiscar."
+   },
+   { 
+      "type":"Normas",
+      "pregunta":"En el caso de que un cliente te falte el respeto, ¿qué debes hacer?",
+      "respuesta":"Si un cliente os falta el respeto debéis comunicarlo a un superior."
+   },
+   { 
+      "type":"Normas",
+      "pregunta":"¿Se puede agredir en el taller?",
+      "respuesta":"Las agresiones en el taller están prohibidas. No se puede matar o agredir en el taller sin aviso previo. Sólo se puede agredir en el caso de que sea en defensa propia."
+   },
+   { 
+      "type":"Normas",
+      "pregunta":"¿Puedes agredir a un compañero?",
+      "respuesta":"Prohibido agredir a compañeros. En caso de que se mate a un compañero el autor del delito será despedido directamente."
+   },
+   { 
+      "type":"Normas",
+      "pregunta":"¿En qué situación puedes agredir en el taller?",
+      "respuesta":"Sólo se puede agredir en el caso de que sea en defensa propia tras haber avisado previamente."
+   },
+   { 
+      "type":"Mecánica",
+      "pregunta":"¿Qué significa que mi motor es un V6?",
+      "respuesta":"Significa que tiene 6 cilindros en V."
+   },
+   { 
+      "type":"Mecánica",
+      "pregunta":"¿Qué función tiene la pinza del freno?",
+      "respuesta":"Frenar el vehículo. (Hace dicha acción presionando la pastilla del freno contra el disco, bloqueando éste y haciendo que la rueda deje de girar)."
+   },
+   { 
+      "type":"Mecánica",
+      "pregunta":"¿Cómo se traslada el movimiento del motor a las ruedas?",
+      "respuesta":"Mediante la transmisión."
+   },
+   { 
+      "type":"Mecánica",
+      "pregunta":"¿Qué función tiene el radiador en un vehículo?",
+      "respuesta":"Enfriar o mantener la temperatura del motor."
+   },
+   { 
+      "type":"Mecánica",
+      "pregunta":"¿Cuál es la diferencia entre un motor ''en V'' y uno lineal?",
+      "respuesta":"El motor en V tiene los cilindros en dicha forma, normalmente en 30º o 45º y dividido en dos bloques en números pares (3 3, 4 4), y el lineal tiene los cilindros en línea recta."
+   },
+   { 
+      "type":"Mecánica",
+      "pregunta":"¿Para qué sirve la transmisión?",
+      "respuesta":"Para trasladar el movimiento del motor a las ruedas. (Sirve para transmitir el movimiento con distintos discos, las marchas, para hacer que el vehículo tenga más ''fuerza'' o más ''velocidad'')."
+   },
+   { 
+      "type":"Mecánica",
+      "pregunta":"¿Para qué sirve el motor de arranque?",
+      "respuesta":"Sirve para arrancar el vehículo."
+   }
+]

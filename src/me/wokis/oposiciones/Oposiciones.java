@@ -4,7 +4,6 @@ import me.wokis.oposiciones.data.Data;
 import me.wokis.oposiciones.data.PreguntasData;
 import me.wokis.oposiciones.gfx.Menu;
 import me.wokis.oposiciones.gfx.Preguntas;
-import me.wokis.oposiciones.gfx.Preguntas2;
 import me.wokis.oposiciones.manager.Archivos;
 import me.wokis.oposiciones.manager.FileManager;
 
@@ -15,7 +14,7 @@ import java.io.IOException;
 public class Oposiciones extends JFrame {
 
     private Menu menu;
-    public Preguntas2 preguntas;
+    public Preguntas preguntas;
     public Data data;
     public FileManager fileManager;
     public PreguntasData preguntasData;
@@ -23,17 +22,12 @@ public class Oposiciones extends JFrame {
 
     private Oposiciones(){
         menu = new Menu(this);
-        preguntas = new Preguntas2(this);
+        preguntas = new Preguntas(this);
         fileManager = new FileManager(this);
         archivos = new Archivos();
         data = new Data();
         preguntasData = new PreguntasData();
         menu.confVent();
-        archivos.loadFilesFromLocal().stream().filter(b -> b.getType().equals("Normas")).forEach(e-> {
-            System.out.println(e.getPregunta());
-            System.out.println(e.getRespuesta());
-            System.out.println("\n");
-        });
     }
 
     public static void main(String[] args) {
